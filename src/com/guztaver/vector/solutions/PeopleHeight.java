@@ -1,7 +1,7 @@
 package com.guztaver.vector.solutions;
 
 import java.util.Scanner;
-import com.guztaver.vector.entities.Person;
+import com.guztaver.entities.Person;
 
 public class PeopleHeight {
     public PeopleHeight() {
@@ -32,10 +32,10 @@ public class PeopleHeight {
         var minorsNumber = 0;
 
         for (Person v : personVector) {
-            if (v.getPersonAge() < 16) {
+            if (v.personAge() < 16) {
                 minorsNumber++;
             }
-            totalHeight += v.getPersonHeight();
+            totalHeight += v.personHeight();
         }
 
         var averageHeight = totalHeight / personVector.length;
@@ -46,8 +46,8 @@ public class PeopleHeight {
         System.out.printf("People that have less than 16 years: %.1f\n", minorPercent);
 
         for (Person v : personVector) {
-            if (v.getPersonAge() < 16) {
-                System.out.printf("%s ", v.getPersonName());
+            if (v.personAge() < 16) {
+                System.out.printf("%s ", v.personAge());
             }
         }
 
